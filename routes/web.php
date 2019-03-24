@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login' , 'LoginController@index');
+// eta ekta niyom 
+Route::post('/login' , ["uses"=>"LoginController@FormPost" , "as"=>"LoginController.FormPost"]);
+//this is second way of doing it 
