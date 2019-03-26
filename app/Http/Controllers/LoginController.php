@@ -14,15 +14,24 @@ class LoginController extends Controller
 
     public function FormPost (Request $request)
     {
-      $uname = $request->username ;
-      $passowrd =  $request->password ;
-      $url =  $request->path();
+    //   $uname = $request->username ;
+    //   $passowrd =  $request->password ;
+    //   $url =  $request->path();
 
-      $x = $request->input();
-      return view('Login.view' , $x);
+    //   $x = $request->input();
+    //   return view('Login.view' , $x);
     
 
       //return ("uname is ".$uname." password is ".$passowrd." and path is ".$url);
+        if ( $request->username == $request->password )
+        {
+            $request->session()->put('username' , $request->username);
 
+            return redirect('/home');
+        }
+        else
+        {
+            return redirect('/login'); 
+        }
     }
 }
