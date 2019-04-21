@@ -21,3 +21,7 @@ Route::post('/login' , ["uses"=>"LoginController@FormPost" , "as"=>"LoginControl
 //this is second way of doing it 
 
 Route::get('/home' , ["uses"=>"HomeController@index" , "as"=>"home.index"] );
+
+//todo route 
+
+Route::get('/todo' , 'TodoController@getAll')->name('TodoController.getAll');
