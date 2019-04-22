@@ -19,9 +19,11 @@ Route::get('/login' , 'LoginController@index');
 // eta ekta niyom 
 Route::post('/login' , ["uses"=>"LoginController@FormPost" , "as"=>"LoginController.FormPost"]);
 //this is second way of doing it 
+//it is also called named routing
 
 Route::get('/home' , ["uses"=>"HomeController@index" , "as"=>"home.index"] );
 
 //todo route 
 
 Route::get('/todo' , 'TodoController@getAll')->name('TodoController.getAll');
+// this one for name routing

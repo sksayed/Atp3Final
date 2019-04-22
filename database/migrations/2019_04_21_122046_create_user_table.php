@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTodoTable extends Migration
+class CreateUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateTodoTable extends Migration
      */
     public function up()
     {
-        Schema::create('todo', function (Blueprint $table) {
-            $table->increments('id'); //this is the primary key 
-            $table->string('TodoName',50); //
-            $table->string('Description',200);
-            $table->integer('completed')->default(0);
+        Schema::create('user', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('username' , 50)->unique();
+            $table->string('password');
         });
     }
 
@@ -28,6 +27,6 @@ class CreateTodoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('todo');
+        Schema::dropIfExists('user');
     }
 }

@@ -8,11 +8,11 @@
    
 </head>
 <body align= "center" >
-    <h1>Welcome {{$name}}</h1>
+    <h1>Welcome {{$username}}</h1>
     <div class="topnav">
-            <a class="active" href="/home">Home</a>|</br>
-            <a href="home/Profile">News</a>|</br>
-            <a href="home/list">Contact</a>|</br>
+            <a class="active" href="/home">Home</a>|
+            <a href="home/Profile">News</a>|
+            <a href="home/list">Contact</a>|
             <a href="Logout">About</a>
     </div>
     
