@@ -27,3 +27,9 @@ Route::get('/home' , ["uses"=>"HomeController@index" , "as"=>"home.index"] );
 
 Route::get('/todo' , 'TodoController@getAll')->name('TodoController.getAll');
 // this one for name routing
+
+
+//Restration Routing
+Route::get('/registration' , 'RegistrationController@index')->name('RegistrationController.index');
+
+Route::post('/registration' , 'RegistrationController@post')->name('RegistrationController.post');

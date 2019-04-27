@@ -10,7 +10,8 @@ class HomeController extends Controller
     {
         if ( $request->session()->has('username'))
         {
-            return view ('Home.home')->with('name', $request->session()->get('username'));
+           // return view ('Home.home')->with('name', $request->session()->get('username'));
+           return view('Admin.AdminDashboard');
         }
         else
         {
