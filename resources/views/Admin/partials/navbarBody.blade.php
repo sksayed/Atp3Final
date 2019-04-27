@@ -1,6 +1,6 @@
 <div class="navbar">
     <a href="#home">Home</a>
-    <a href="#news">News</a>
+    <a href="#news">All Users</a>
     <div class="dropdown">
       <button class="dropbtn">Dropdown 
         <i class="fa fa-caret-down"></i>

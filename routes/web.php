@@ -33,3 +33,5 @@ Route::get('/todo' , 'TodoController@getAll')->name('TodoController.getAll');
 Route::get('/registration' , 'RegistrationController@index')->name('RegistrationController.index');
 
 Route::post('/registration' , 'RegistrationController@post')->name('RegistrationController.post');
+
+Route::get('/allUsers' , "HomeController@allUsers") ;

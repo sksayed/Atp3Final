@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,6 +11,9 @@ class HomeController extends Controller
         if ( $request->session()->has('username'))
         {
            // return view ('Home.home')->with('name', $request->session()->get('username'));
+           //$username = DB::table('user')->get();
+          
+          
            return view('Admin.AdminDashboard');
         }
         else
@@ -18,5 +21,13 @@ class HomeController extends Controller
             return redirect('/login' );
         }
 
+    }
+
+     public function allUser(  )
+    {
+        $user = DB::table('user')->get();
+        return view()
+
+       
     }
 }
